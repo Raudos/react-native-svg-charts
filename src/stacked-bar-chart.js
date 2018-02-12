@@ -56,6 +56,7 @@ class BarChart extends PureComponent {
                   gridProps,
                   extras,
                   renderExtra,
+                  renderDecorator
               } = this.props
 
         const { height, width } = this.state
@@ -139,6 +140,7 @@ class BarChart extends PureComponent {
                                             animate={ animate }
                                             animationDuration={ animationDuration }
                                         />
+                                        {renderDecorator(bar, index)}
                                     </G>
                                 )
                             })
